@@ -1,3 +1,5 @@
+This repository contains all of my works of CSE324(**Operating System Lab** ) course.
+
 ## Scheduling Algorithms
 To decide which process to execute first and which process to execute last to achieve maximum CPU utilisation, computer scientists have defined some algorithms, they are:
 
