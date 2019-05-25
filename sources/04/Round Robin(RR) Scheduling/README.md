@@ -12,3 +12,7 @@
 - The same steps are repeated until all the process are finished.
 
 The round robin algorithm is simple and the overhead in decision making is very low. It is the best scheduling algorithm for achieving better and evenly distributed response time.
+
+**Output**
+
+![RR](https://user-images.githubusercontent.com/37344605/58371756-f57b3f00-7f35-11e9-8870-addd7a9d9989.png)
