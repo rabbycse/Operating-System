@@ -13,7 +13,7 @@
 
 The round robin algorithm is simple and the overhead in decision making is very low. It is the best scheduling algorithm for achieving better and evenly distributed response time.
 
-**Example**
+**Program**
 
 ```cpp
 #include<stdio.h> 
