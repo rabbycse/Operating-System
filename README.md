@@ -52,9 +52,9 @@ touch filename	                        # Create an empty file with the specified
 who [options]	                        # Display who is logged on.
 ```
 
+<br></br>
 
-
-## Some basic bash snippets I use to introduce shell scripting to my Linux class.
+### Some basic bash snippets I use to introduce shell scripting to my Linux class.
 ```sh
 #!/bin/bash
 
