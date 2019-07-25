@@ -54,155 +54,43 @@ who [options]	                        # Display who is logged on.
 
 
 
-#### Wine Setup
+#### Some basic bash snippets I use to introduce shell scripting to my Linux class.
 ```
-sudo dpkg --add-architecture i386 
-sudo add-apt-repository ppa:wine/wine-builds
-sudo apt-get update
-sudo apt-get install --install-recommends winehq-devel
-```
+#!/bin/bash
 
-#### Git install
-```
-sudo apt-get install git
-```
+# viewing environment variables
+echo "The value of the home variable is: "
+echo $HOME
 
-#### Install Notepadqq in Ubuntu
-```
-sudo add-apt-repository ppa:notepadqq-team/notepadqq
-sudo apt-get update
-sudo apt-get install notepadqq
-````
-#### Sublime install
-```
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
-````
+# issue a command
+echo "The output of the pwd command is: "
+pwd
 
-#### Dropbox Headless Install
-```
-32-bit:
-    cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
-64-bit:
-    cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-    
-    ~/.dropbox-dist/dropboxd
-    
-    sudo apt install nautilus-dropbox
-    
-    Start
-         dropbox start [-i]
-    Auto Start
-        dropbox autostart y
-```
+# that's boring, grab output and make it readable
+echo "The value of the pwd command is $(pwd)"
 
-#### Linux GIMP (Photoshop) install
-```
-sudo apt-get install gimp 
-```
+# assign command output to a variable
+output=$(pwd)
+echo "The value of the output variable is ${output}"
 
-#### Avro install
-```
-wget "https://github.com/maateen/avro/releases/download/v2.0/avro_2.0-1_all.deb"
- 
-sudo dpkg -i avro_2.0-1_all.deb
-  
-sudo apt-get install -fy
-  
-ibus restart
+# view data on the command line
+echo "I saw $@ on the command line"
 
-Keyboard Layout
-  ১ System Settings এ গিয়ে Keyboard Layout সিলেক্ট করুন।
-  ২ Add Layout বাটন এ ক্লিক করুন (নিচে ছোট + চিহ্ন)
-  ৩ Choose a Layout স্ক্রিন এ লিখুন Bengali
-  ৪ একটি খুব সহজ Layout হচ্ছে Bengali (Probhat), ওটা সিলেক্ট করে ডাবল ক্লিক করুন।
-Tips: সহজে Layout পাল্টানোর জন্য Shift+Caps Lock ব্যবহার করুন।
-```
+# read data from the user
+echo "Enter a value: "
+read userInput
+echo "You just entered $userInput"
 
-#### Chromium Browser
-```
-sudo add-apt-repository ppa:canonical-chromium-builds/stage
-sudo apt-get update
-sudo apt-get install chromium-browser
-```
+# concatenate userinput with command output
+echo "Enter a file extension: "
+read ext
+touch "yourfile.${ext}"
 
-#### Xampp Install
+# check to see if a file exists
+if [ -d /etc/sysconfig ]; then
+        echo "That file is there and a directory"
+else
+        echo "Not there or not a directory"
+fi
 ```
-For Ubuntu 32 bit :
-wget https://www.apachefriends.org/xampp-files/7.0.2/xampp-linux-7.0.2-1-installer.run
-sudo chmod +x xampp-linux-7.0.2-1-installer.run
-sudo ./xampp-linux-7.0.2-1-installer.run
-
-For Ubuntu 64 bit :
-wget https://www.apachefriends.org/xampp-files/7.0.2/xampp-linux-x64-7.0.2-1-installer.run
-sudo chmod +x xampp-linux-x64-7.0.2-1-installer.run
-sudo ./xampp-linux-x64-7.0.2-1-installer.run
-
-How to Remove:
-sudo /opt/lampp/lampp stop
-sudo rm -rf /opt/lampp
-
-File permission:
-cd /opt/lampp
-sudo chmod 777 htdocs
-```
-
-#### VLC install
-```
-sudo apt-get install synaptic vlc
-```
-
-#### Bangla Fonts Support
-```
-sudo apt-get install fonts-beng fonts-beng-extra fonts-lohit-beng-bengali;
-apt-cache search bengali
-```
-
-#### Web Siter Coper Httrack
-```
-sudo apt-get install webhttrack
-```
-
-#### Weather Check
-```
-curl wttr.in/your Location
-
-curl wttr.in/brahmanbaria
-```
-
-#### Deluge BitTorrent Client Installer
-```
-sudo apt-get install deluge
-```
-
-#### Flash Player install
-```
-sudo apt-get install firefox ubuntu-restricted-extras
-
-sudo apt-get install ttf-mscorefonts-installer unrar gstreamer0.10-plugins-bad-multiverse libavcodec-extra-53 gstreamer0.10-plugins-ugly gstreamer1.0-plugins-ugly adobe-flashplugin flashplugin-installer gstreamer0.10-plugins-bad gstreamer1.0-plugins-bad gstreamer0.10-ffmpeg gstreamer1.0-libav gstreamer0.10-fluendo-mp3 gstreamer1.0-fluendo-mp3 chromium-codecs-ffmpeg-extra
-
-sudo apt-get install flashplugin-installer
-sudo apt-get install adobe-flashplugin
-```
-
-#### Color Picker
-```
-sudo apt-get install gpick
-```
-
-#### File Zilla
-```
-sudo add-apt-repository ppa:adabbas/1stppa
-sudo apt-get update
-sudo apt-get install filezilla
-```
-
-#### Google Drive Install
-```
-sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo apt-get update
-sudo apt-get install grive
-```
-
 
