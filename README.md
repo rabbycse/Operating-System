@@ -54,8 +54,8 @@ who [options]	                        # Display who is logged on.
 
 
 
-#### Some basic bash snippets I use to introduce shell scripting to my Linux class.
-```
+### Some basic bash snippets I use to introduce shell scripting to my Linux class.
+```cpp
 #!/bin/bash
 
 # viewing environment variables
@@ -92,5 +92,7 @@ if [ -d /etc/sysconfig ]; then
 else
         echo "Not there or not a directory"
 fi
+
 ```
+
 
