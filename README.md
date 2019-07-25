@@ -54,8 +54,8 @@ who [options]	                        # Display who is logged on.
 
 
 
-### Some basic bash snippets I use to introduce shell scripting to my Linux class.
-```cpp
+## Some basic bash snippets I use to introduce shell scripting to my Linux class.
+```sh
 #!/bin/bash
 
 # viewing environment variables
